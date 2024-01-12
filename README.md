@@ -18,7 +18,7 @@ A dynamic RGB clock that changes its background color based on the current time.
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/rgb-clock.git
+    git clone https://github.com/your-username/rgb-hex-clock.git
     cd rgb-clock
     ```
 
