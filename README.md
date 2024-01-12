@@ -9,13 +9,9 @@ A dynamic RGB clock that changes its background color based on the current time.
 
 ## Demo
 
-Include a link to a live demo or a screenshot/gif of the project in action.
+![RGB Clock Demo](https://imgur.com/ZaEEyAq.gif)
 
 ## Getting Started
-
-### Prerequisites
-
-- Web browser (Google Chrome, Mozilla Firefox, etc.)
 
 ### Usage
 
