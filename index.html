@@ -1,83 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <meta charset="UTF-8">
-    <title>RGB Clock</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            font-size: 3rem;
-            color: white;
-            transition: background-color 1s ease-in-out;
-            overflow: hidden;
-        }
-    </style>
-    <!-- Favicon for the website -->
+    <title>RGB (Hexidecimal) Clock</title>
     <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAB5JREFUOE9jlHZM/c9AAWAcNYBhNAwYRsOAYViEAQA7nBwRrE83fwAAAABJRU5ErkJggg==">
 </head>
 <body>
     <!-- Display color in h1 element -->
     <h1></h1>
-    <script>
-        // Function to set background color and update content
-        function setBGColor() {
-            let now = new Date();
-            // Calculate elapsed time since midnight
-            let elapsedMilliseconds = now.getTime() - new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0).getTime();
-            // Calculate color index based on elapsed time
-            let colorIndex = Math.floor(elapsedMilliseconds / (24 * 60 * 60 * 1000) * 16777215);
-            // Generate hex color code
-            let bgColor = `#${colorIndex.toString(16).padStart(6, '0')}`;
-            
-            // Apply background color to body
-            document.body.style.backgroundColor = bgColor;
-            // Update h1 content with color code
-            document.querySelector('h1').textContent = bgColor.toUpperCase();
-            // Set text color to inverted color for better visibility
-            document.querySelector('h1').style.color = invertColor(bgColor);
-            // Update favicon color
-            setFaviconColor();
-        }
-
-        // Function to invert color
-        function invertColor(hex) {
-            // XOR operation to invert each RGB component
-            return '#' + (0xFFFFFF ^ parseInt(hex.slice(1), 16)).toString(16).padStart(6, '0');
-        }
-
-        // Function to set favicon color dynamically
-        function setFaviconColor() {
-            let bgColor = document.body.style.backgroundColor;
-            // Create a canvas to draw a filled square with the background color
-            let canvas = document.createElement('canvas');
-            canvas.width = canvas.height = 16;
-            canvas.getContext('2d').fillStyle = bgColor;
-            canvas.getContext('2d').fillRect(0, 0, canvas.width, canvas.height);
-            
-            // Create a link element for the favicon and set its attributes
-            let link = document.createElement('link');
-            link.rel = 'shortcut icon';
-            link.type = 'image/png';
-            link.href = canvas.toDataURL();
-            
-            // Remove any existing link elements for the favicon and add the new one
-            let existingLinks = document.head.querySelectorAll('link[rel="shortcut icon"]');
-            for (let i = 0; i < existingLinks.length; i++) {
-                document.head.removeChild(existingLinks[i]);
-            }
-            document.head.appendChild(link);
-        }
-
-        // Initial setup
-        setBGColor();
-        // Update background color every 1000ms (1 second)
-        setInterval(setBGColor, 1000);
-    </script>
 </body>
 </html>
