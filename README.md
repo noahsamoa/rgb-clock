@@ -10,10 +10,8 @@ A sister project will be released, iterating on the same logic, but with the hue
 - **Dynamic Background Color:** The background color changes based on the current time, creating a visually changing experience.
 - **Favicon Color Matching:** The favicon dynamically matches the background color for a cohesive design.
 
-## Demo
-<iframe src="https://codepen.io/noahsamoa/pen/JjmrRxv" width="600" height="400" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+## Demo GIF
 
-GIF:
 ![RGB Clock Demo](https://imgur.com/ZaEEyAq.gif)
 
 ## Getting Started
