@@ -1,4 +1,4 @@
-# RGB Clock
+# RGB (Hexidecimal) Clock
 
 A dynamic RGB clock that changes its background color based on the current time. The project also updates the webpage's favicon to match the background color. This serves as a simple and visually appealing example of using JavaScript to manipulate the DOM and create dynamic content. Iterates from #000000 to #FFFFFF resetting at 00:00, daily. 
 
