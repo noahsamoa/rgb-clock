@@ -4,8 +4,8 @@ A dynamic RGB clock that changes its background color based on the current time.
 
 ## Features
 
-- **Dynamic Background Color:** The background color changes based on the current time, creating a visually changing experience.
-- **Favicon Color Matching:** The favicon dynamically matches the background color for a cohesive design.
+- **Dynamic Background Color:** The background color changes based on the current time, creating a visually dynamic experience.
+- **Favicon Color Matching:** The favicon programmatically matches the background color for a cohesive design.
 
 ## Demo GIF
 
